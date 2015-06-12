@@ -1,0 +1,15 @@
+<?php if(\Input::post('getNewShouts') != 1): ?>
+<div class="mod_shoutbox">
+<h3>Shoutbox</h3>
+<div id="messages">
+	<?php endif; ?>
+	<?php foreach($this->shouts as $sKey => $shout): ?>
+	<ul>
+		<li><?php echo $shout['Name']?></li>
+		<li><?php echo $shout['Message']?></li>
+	</ul>
+	<?php endforeach; ?>
+	<?php if(\Input::post('getNewShouts') != 1): ?>
+</div>
+</div>
+<?php endif; ?>
